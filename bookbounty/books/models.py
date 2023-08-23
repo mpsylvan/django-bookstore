@@ -25,7 +25,7 @@ class Book(models.Model):
     title = models.CharField(max_length =350)
     release_year = models.PositiveIntegerField()
     price = models.FloatField(help_text='price in USD')
-    author_name = models.CharField(max_length = 120, default='Tamsym Muir')
+    author_name = models.CharField(max_length = 120, default='Tam Muir')
     genre = models.CharField(max_length=12, choices = genre_choices, default='cl')
     book_type = models.CharField(max_length =12, choices= book_type_choices, default='hc')
 
