@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booklist</title>
+    <link rel="stylesheet" href="{% static 'books/styles.css' %}">
+</head>
+    <body>
+        <div class="book-records" style="display:flex; flex-direction: column;">
+            <h1>Books in Database</h1>  
+                {% for object in object_list %} 
+                {% comment%}  access records from model (object_list) one at a time using for loop  {% endcomment%}
+                {% comment%}  “object” refers to one record in the list  {% endcomment%} 
+                <h2>{{object.title}}</h2>
+                <a href="{{object.get_absolute_url}}">
+                    <img src="{{object.pic.url}}" alt="{{object}} cover" height="200" width="150">
+                </a>    
+                <ul>
+                    <li>{{object.author_name}} </li>
+                    <li>{{object.release_year}}</li>
+                    <li>{{object.price}}</li>
+                    <li>{{object.genre}}</li>
+                    <li>{{object.book_type}}</li>
+                </ul>
+                <br>
+                {% endfor %}
+        </div>
+    </body>
+</html>
+
+
+
