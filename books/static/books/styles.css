@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:ital@1&family=Belanosima:wght@400;600&family=Karla&display=swap');
+
+html {
+    color: rgb(57, 131, 173);
+    background-color: black;
+    font-family: 'B612', sans-serif;
+    font-family: 'Karla', sans-serif;
+    font-family: 'Belanosima', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}
