@@ -7,8 +7,9 @@ from django.db import models
 
 class Customer(models.Model):
     name = models.CharField(max_length=120)
-    notes = models.TextField()
+    notes = models.TextField(default='no notes')
     email = models.EmailField()
+    pic = models.ImageField(upload_to='custs', default='grey_skull.png')
 
 
     def __str__(self):

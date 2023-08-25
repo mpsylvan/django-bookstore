@@ -7,3 +7,4 @@ urlpatterns = [
     path('', home),
     path('binkies', formatted_results)
 ]
+

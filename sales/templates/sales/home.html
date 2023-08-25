@@ -1,12 +1,15 @@
-<!DOCTYPE html>
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'sales/styles.css' %}">
   </head>
-  <body>
-    <h2>Welcome to sales</h2>
+  <body style="display:flex; flex-direction:column; align-items:center">
+    <img src = "{% static 'sales/images/bg.png' %}" alt="home" height="500" width="1000">
+    <h2 style="text-align:center">Welcome to Bookbounty</h2>
   </body>
 </html>

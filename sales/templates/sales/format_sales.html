@@ -1,12 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="{% static 'sales/styles.css' %}">
+   
+</head>
 <html>
   <body>
-    <h2>Your sales formatted</h2>
-    <ul>
-      <li class="sale-line">Sale 1-01</li>
-      <li class="sale-line">Sale 1-02</li>
-      <li class="sale-line">Sale 1-03</li>
-    </ul>
-    <a>hi</a>
+    <div class="container">
+      <img src="{% static 'sales/images/bookstore.jpg' %}" height="800" alt="">
+      <h2>Your sales formatted</h2>
+      <ul>
+        <li class="sale-line">Sale 1-01</li>
+        <li class="sale-line">Sale 1-02</li>
+        <li class="sale-line">Sale 1-03</li>
+      </ul>
+
+    </div >
   </body>
 </html>
