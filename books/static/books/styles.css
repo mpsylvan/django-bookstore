@@ -13,6 +13,24 @@ body {
     justify-content: center;
 }
 
+.book-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.book-box{
+    margin: 10px;
+}
+
 li {
     list-style: none;
+}
+
+
+.login-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }

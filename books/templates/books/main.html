@@ -10,23 +10,31 @@
 </head>
     <body>
         <div class="book-records" style="display:flex; flex-direction: column;">
-            <h1>Books in Database</h1>  
-                {% for object in object_list %} 
-                {% comment%}  access records from model (object_list) one at a time using for loop  {% endcomment%}
-                {% comment%}  “object” refers to one record in the list  {% endcomment%} 
-                <h2>{{object.title}}</h2>
-                <a href="{{object.get_absolute_url}}">
-                    <img src="{{object.pic.url}}" alt="{{object}} cover" height="200" width="150">
-                </a>    
-                <ul>
-                    <li>{{object.author_name}} </li>
-                    <li>{{object.release_year}}</li>
-                    <li>{{object.price}}</li>
-                    <li>{{object.genre}}</li>
-                    <li>{{object.book_type}}</li>
-                </ul>
-                <br>
-                {% endfor %}
+            <nav style="display:flex; ;">
+                <a href="{% url 'logout'%}">Logout</a>
+                <h1>Books in Database</h1>  
+            </nav>
+                <div class = 'book-list'>
+                    
+                    {% for object in object_list %} 
+                    {% comment%}  access records from model (object_list) one at a time using for loop  {% endcomment%}
+                    {% comment%}  “object” refers to one record in the list  {% endcomment%} 
+                    <div class = 'book-box'>
+                        <h2>{{object.title}}</h2>
+                        <a href="{{object.get_absolute_url}}">
+                            <img src="{{object.pic.url}}" alt="{{object}} cover" height="200" width="150">
+                        </a>    
+                        <ul>
+                            <li>{{object.author_name}} </li>
+                            <li>{{object.release_year}}</li>
+                            <li>{{object.price}}</li>
+                            <li>{{object.genre}}</li>
+                            <li>{{object.book_type}}</li>
+                        </ul>
+                        <br>
+                    </div>
+                    {% endfor %}
+                </div>
         </div>
     </body>
 </html>

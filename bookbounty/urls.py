@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import login_view, logout_view
 
 
 
@@ -26,7 +27,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sales.urls')),
-    path('books/', include('books.urls'))
+    path('books/', include('books.urls')),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout')
 ]
 
 # hoist a path for '/media' onto urlpatterns which references the media folder at the project's root. 

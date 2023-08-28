@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import formatted_results, home
+from .views import home, records
 
 app_name = 'sales'
 
 urlpatterns = [
     path('', home),
-    path('binkies', formatted_results)
+    path('sales/', records, name='records')
 ]
 

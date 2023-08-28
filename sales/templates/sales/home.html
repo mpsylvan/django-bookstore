@@ -11,5 +11,7 @@
   <body style="display:flex; flex-direction:column; align-items:center">
     <img src = "{% static 'sales/images/bg.png' %}" alt="home" height="500" width="1000">
     <h2 style="text-align:center">Welcome to Bookbounty</h2>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'logout' %}">Logout</a>
   </body>
 </html>
