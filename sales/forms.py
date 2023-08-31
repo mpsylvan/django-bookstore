@@ -11,8 +11,8 @@ CHART_CHOICES = (
 
 qs = Sale.objects.all()
 titles = [e.book.title for e in qs]
-title_choices = ()
 titles = set(titles)
+title_choices = ()
 for e in titles:
     title_choices = ((e,e),) + title_choices
 
