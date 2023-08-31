@@ -9,7 +9,21 @@
 
     <title>Records</title>
 </head>
-<body>
+<body style="display:flex; flex-direction:column; height:80vh">
     <h1>Search for a Sales Record: </h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button class="search-btn" type="submit">search</button>
+    </form>
+    <div class="df-container" style="display:flex; justify-content:center; margin: 10px">
+        {% if df %}
+            {{ df|safe }}
+            <br>
+            <img src="data:image/png;base64, {{ chart|safe }}" alt="data visualization chart">
+        {% else %}
+            <p>No data yet...</p>
+        {% endif %}
+    </div>
 </body>
 </html>
