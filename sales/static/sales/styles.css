@@ -12,6 +12,7 @@ html {
 body {
     display: flex;
     justify-content: center;
+    height: 80vh;
 }
 
  .container {
@@ -21,4 +22,10 @@ body {
 
 li {
     list-style: none;
+}
+
+.search-btn{
+    background-color: rgb(67, 31, 188);
+    color: #fff;
+    border-radius: 10px;
 }
