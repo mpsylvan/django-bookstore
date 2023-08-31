@@ -27,7 +27,7 @@ def get_graph():
 def get_chart(chart_type, data, **kwargs):
     # AntiGrain Geometry
     plt.switch_backend('AGG')
-    fig = plt.figure(figsize=(6,3))
+    plt.figure(figsize=(6,3))
     if chart_type == '#1':
         plt.bar(data['date_created'], data['quantity'])
     elif chart_type == "#2":
